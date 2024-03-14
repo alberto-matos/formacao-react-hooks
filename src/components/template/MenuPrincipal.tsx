@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater } from "@tabler/icons"
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconTextIncrease } from "@tabler/icons"
 import { MenuItem } from "../../data/models/MenuItem"
 import { MenuSecao } from "../../data/models/MenuSecao"
 import Logo from "./Logo"
@@ -16,6 +16,7 @@ export default function MenuPrincipal() {
                 { titulo: "Votação", url: "/essenciais/votacao", tag: "useState<Object>", icone: <IconUsers /> },
                 { titulo: "Consulta API", url: "/essenciais/consultaApi", tag: "useEffect", icone: <IconArrowsLeftRight /> },
                 { titulo: "Número Maior", url: "/essenciais/numeroMaior", tag: "useEffect", icone: <IconMathGreater /> },
+                { titulo: "Contagem de Caracteres", url: "/essenciais/contagemCaracteres", tag: "useEffect", icone: <IconTextIncrease /> },
             ],
         },
     ]

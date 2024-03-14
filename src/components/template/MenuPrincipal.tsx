@@ -1,10 +1,10 @@
-import { IconMenu, IconX, IconNumbers, IconUsers } from "@tabler/icons";
-import { MenuItem } from "../../data/models/MenuItem";
-import { MenuSecao } from "../../data/models/MenuSecao";
-import Logo from "./Logo";
-import MenuPrincipalItem from "./MenuPrincipalItem";
-import MenuPrincipalSecao from "./MenuPrincipalSecao";
-import Flex from "./Flex";
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight } from "@tabler/icons"
+import { MenuItem } from "../../data/models/MenuItem"
+import { MenuSecao } from "../../data/models/MenuSecao"
+import Logo from "./Logo"
+import MenuPrincipalItem from "./MenuPrincipalItem"
+import MenuPrincipalSecao from "./MenuPrincipalSecao"
+import Flex from "./Flex"
 
 export default function MenuPrincipal() {
     const secoes = [
@@ -12,18 +12,19 @@ export default function MenuPrincipal() {
             titulo: "Essenciais",
             aberta: true,
             itens: [
-                {titulo: "Contador", url:"/essenciais/contador", tag:"useState", icone:<IconNumbers/>},
-                {titulo: "Votação", url:"/essenciais/votacao", tag:"useState", icone:<IconUsers/>},
+                { titulo: "Contador", url: "/essenciais/contador", tag: "useState<Primitive>", icone: <IconNumbers /> },
+                { titulo: "Votação", url: "/essenciais/votacao", tag: "useState<Object>", icone: <IconUsers /> },
+                { titulo: "Consulta API", url: "/essenciais/consultaApi", tag: "useEffect", icone: <IconArrowsLeftRight /> },
             ],
         },
-    ];
-    const mini = false;
+    ]
+    const mini = false
     function renderizarSecoes() {
         return secoes.map((secao: MenuSecao) => (
             <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
                 {renderizarItens(secao)}
             </MenuPrincipalSecao>
-        ));
+        ))
     }
 
     function renderizarItens(secao: MenuSecao) {
@@ -36,7 +37,7 @@ export default function MenuPrincipal() {
                 url={item.url}
                 mini={mini}
             />
-        ));
+        ))
     }
 
     return (
@@ -54,5 +55,5 @@ export default function MenuPrincipal() {
             </Flex>
             <nav className="flex flex-col gap-4 m-7">{renderizarSecoes()}</nav>
         </aside>
-    );
+    )
 }

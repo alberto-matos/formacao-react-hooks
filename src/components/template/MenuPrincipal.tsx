@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers } from "@tabler/icons";
+import { IconMenu, IconX, IconNumbers, IconUsers } from "@tabler/icons";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -12,7 +12,8 @@ export default function MenuPrincipal() {
             titulo: "Essenciais",
             aberta: true,
             itens: [
-                {titulo: "Contador", url:"/essenciais/contador", tag:"useState", icone:<IconNumbers/>}
+                {titulo: "Contador", url:"/essenciais/contador", tag:"useState", icone:<IconNumbers/>},
+                {titulo: "Votação", url:"/essenciais/votacao", tag:"useState", icone:<IconUsers/>},
             ],
         },
     ];
